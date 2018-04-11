@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   instabot:
-    build: ./
+    build: ./bot
     restart: always
     volumes:
-      - ./app.py:/app/app.py
+      - ./config.json:/app/config.json
