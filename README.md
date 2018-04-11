@@ -14,8 +14,10 @@ docker-compose up -d
 git clone https://github.com/CupCakeArmy/docker-instabot
 cd docker-instabot
 
-# Insert your credentials and customize tags etc.
-vim app.py
+# Copy or Move sample config.
+cp config.sample.json config.json
+# Insert own login data and tags.
+vim config.json
 
 # Run
 docker-compose up -d
