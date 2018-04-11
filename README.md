@@ -10,4 +10,13 @@ docker-compose up -d
 
 ## Setup 🏗
 
-Insert your credentials in the `app.py` file and change the settings to what you like.
+```bash
+git clone https://github.com/CupCakeArmy/docker-instabot
+cd docker-instabot
+
+# Insert your credentials and customize tags etc.
+vim app.py
+
+# Run
+docker-compose up -d
+```
