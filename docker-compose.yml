@@ -4,5 +4,6 @@ services:
   instabot:
     build: ./bot
     restart: always
+    container_name: instabot
     volumes:
-      - ./config.json:/app/config.json
+      - ./config.json:/app/config.json:ro
