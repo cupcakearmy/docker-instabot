@@ -4,7 +4,7 @@ Docker container for runnning [Instabot](https://github.com/instabot-py/instabot
 
 ## Quickstart 💥
 
-```
+```bash
 docker-compose up -d
 ```
 
