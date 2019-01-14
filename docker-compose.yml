@@ -6,4 +6,7 @@ services:
     restart: always
     container_name: instabot
     volumes:
+      # Uncomment if you want to save the db.
+      # In that case run `touch data.db` before running the container!
+      # - ./data.db:/app/follows_db.db
       - ./config.json:/app/config.json:ro
