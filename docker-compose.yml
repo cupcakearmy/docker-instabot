@@ -1,4 +1,4 @@
-version: '3.6'
+version: '3'
 
 services:
   instabot:
@@ -6,9 +6,5 @@ services:
     restart: always
     container_name: instabot
     volumes:
-      # To reset the DB delete and create the data.db file
-      # rm data.db; touch data.db;
-      # or
-      # cat /dev/null > data.db
-      - ./data.db:/app/follows_db.db
+      - ./data.db:/app/data.db
       - ./config.json:/app/config.json:ro
