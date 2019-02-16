@@ -2,11 +2,13 @@ version: '3.6'
 
 services:
   instabot:
-    build: ./bot
+    image: cupcakearmy/instabot
     restart: always
     container_name: instabot
     volumes:
-      # Uncomment if you want to save the db.
-      # In that case run `touch data.db` before running the container!
-      # - ./data.db:/app/follows_db.db
+      # To reset the DB delete and create the data.db file
+      # rm data.db; touch data.db;
+      # or
+      # cat /dev/null > data.db
+      - ./data.db:/app/follows_db.db
       - ./config.json:/app/config.json:ro

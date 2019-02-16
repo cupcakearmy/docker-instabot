@@ -23,10 +23,11 @@ vim config.json
 docker-compose up -d
 ```
 
-#### (Optional) Persist the DB 💽
+### (Default) Persist the DB 💽
 
-Instabot saved the followers etc. in a sqlite db called `follows_db.db`. If you wish to persist the changes between updates you need to uncomment the line inside `docker-compose.yml` and run `touch data.db` before running `docker-compose up -d`
+By default the DB is persisted. Instabot saved the followers etc. in a sqlite db called `follows_db.db`. To start with a clean state you need to delete the `data.db` file.
+Either run `rm data.db; touch data.db` or `cat /dev/null > data.db`.
 
-### Credits 
+### Credits
 
 The actual code for the bot is from https://github.com/instabot-py/instabot.py
